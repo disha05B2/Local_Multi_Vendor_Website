@@ -8,22 +8,120 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <title>Dashboard</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
   <link href="https://gitcdn.link/cdn/StartBootstrap/startbootstrap-sb-admin/master/dist/css/styles.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
     crossorigin="anonymous"></script>
+  <style>
+    /* Body and general styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #343a40;
+    padding: 0.5rem 1rem;
+    height: 50px;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+.navbar-dark .navbar-nav .dropdown-menu {
+    background-color: #343a40;
+}
+
+.navbar-dark .navbar-nav .dropdown-item {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .dropdown-item:hover {
+    background-color: #495057;
+}
+
+/* Sidebar styles */
+#layoutSidenav_nav {
+    background-color: #343a40;
+    position: fixed;
+    padding-left: 10px;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+}
+
+.sb-sidenav-menu-heading {
+    font-size: 0.85rem;
+    color: #ccc;
+    {{!-- padding: 0.5rem 1rem; --}}
+}
+
+.sb-sidenav-menu .nav-link {
+    color: #fff;
+    padding: 0.75rem 1rem;
+}
+
+.sb-sidenav-menu .nav-link:hover {
+    background-color: #495057;
+}
+
+.sb-sidenav-footer {
+    background-color: #343a40;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+}
+
+/* Footer styles */
+footer {
+    bottom: 50px;
+    background-color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  </style>
 </head>
 
 <body class="sb-nav-fixed">
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="/">LMVW Admin</a>
+    <a class="navbar-brand ps-3" href="/">LMVW Admin</a><br>
     <!-- Sidebar Toggle-->
-    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-        class="fas fa-bars"></i></button>
+    {{!-- <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+        class="fas fa-bars"></i></button> --}}
     <!-- Navbar Search-->
     <!-- Navbar-->
-    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+    {{!-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
           aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -37,7 +135,7 @@
         </ul>
         {{/if}}
       </li>
-    </ul>
+    </ul> --}}
   </nav>
   <div id="layoutSidenav">
     <div id="layoutSidenav_nav">

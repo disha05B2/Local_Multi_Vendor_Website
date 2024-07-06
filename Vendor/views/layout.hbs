@@ -9,6 +9,135 @@
   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
   <link href="https://gitcdn.link/cdn/StartBootstrap/startbootstrap-sb-admin/master/dist/css/styles.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <style>
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Preferred font stack */
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #343a40;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+.navbar-dark .navbar-nav .dropdown-menu {
+    background-color: #343a40;
+}
+
+.navbar-dark .navbar-nav .dropdown-item {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .dropdown-item:hover {
+    background-color: #495057;
+}
+
+/* Sidebar styles */
+#layoutSidenav_nav {
+    background-color: #343a40;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    overflow-y: auto;
+}
+
+.sb-sidenav-menu-heading {
+    font-size: 0.85rem;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+}
+
+.sb-sidenav-menu .nav-link {
+    color: #fff;
+    padding: 0.75rem 1rem;
+}
+
+.sb-sidenav-menu .nav-link:hover {
+    background-color: #495057;
+}
+
+.sb-sidenav-footer {
+    background-color: #343a40;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Main content styles */
+#layoutSidenav_content {
+    margin-left: 250px; /* Adjust this value based on sidebar width */
+    padding: 20px;
+}
+
+.container-fluid {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Container shadow */
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding inside container */
+}
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff; /* Primary button border color */
+    padding: 8px 16px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size */
+}
+
+.btn-primary:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+    border-color: #0062cc; /* Darker border on hover */
+}
+
+.form-control {
+    border-color: #ced4da; /* Form control border color */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Form control focus color */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Form control focus shadow */
+}
+</style>
 </head>
 
 <body class="sb-nav-fixed">

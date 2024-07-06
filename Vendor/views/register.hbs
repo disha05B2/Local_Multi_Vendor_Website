@@ -1,3 +1,70 @@
+<head>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Preferred font stack */
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Primary button color */
+            border-color: #007bff; /* Primary button border color */
+            padding: 8px 16px; /* Adjust padding */
+            font-size: 16px; /* Adjust font size */
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9; /* Darker blue on hover */
+            border-color: #0062cc; /* Darker border on hover */
+        }
+
+        .container {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Container shadow */
+            background-color: #fff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            padding: 30px; /* Padding inside container */
+        }
+
+        .form-control {
+            border-color: #ced4da; /* Form control border color */
+        }
+
+        .form-control:focus {
+            border-color: #007bff; /* Form control focus color */
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Form control focus shadow */
+        }
+
+        .form-label {
+            font-weight: bold; /* Bold form labels */
+        }
+
+        .form-file-input {
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .form-file-input input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            outline: none;
+            background: white;
+            cursor: inherit;
+            display: block;
+        }
+
+        .form-file-input .btn {
+            white-space: nowrap;
+        }
+    </style>
+</head>
 <div class="container col-xxl-8">
     <main>
         <div class="py-5 text-center">

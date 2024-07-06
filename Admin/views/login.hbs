@@ -1,3 +1,110 @@
+<head>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-lg-7 {
+  margin-bottom: 20px;
+}
+
+h1.display-4 {
+  font-size: 3rem;
+  color: #343a40;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  width:300px;
+  margin-left: 50px;
+  align-items: center;
+}
+
+form:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-floating {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-floating input {
+  left:120px;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+{{!-- .form-floating label {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #6c757d;
+  transition: all 0.2s;
+} --}}
+
+.form-floating input:focus + label,
+.form-floating input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 15px;
+  font-size: 0.875rem;
+  color: #007bff;
+}
+
+.checkbox label {
+  font-size: 0.875rem;
+}
+
+button.btn {
+  align-items: center;
+  font-size: 1.25rem;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button.btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+hr {
+  margin: 20px 0;
+}
+
+</style>
+</head>
 <div class="container col-xl-12 col-xxl-10 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
       <div class="col-lg-7 text-center text-lg-start">
@@ -6,12 +113,14 @@
       <div class="col-md-10 mx-auto col-lg-5">
         <form class="p-4 p-md-5 border rounded-3 bg-light" method="POST" action="/login">
           <div class="form-floating mb-3">
+            <label for="floatingInput">Email address</label><br>
             <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+            
           </div>
           <div class="form-floating mb-3">
+            <label for="floatingPassword">Password</label><br>
             <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            
           </div>
           <div class="checkbox mb-3">
             <label>

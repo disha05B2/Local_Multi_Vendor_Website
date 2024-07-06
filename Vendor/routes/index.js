@@ -25,30 +25,30 @@ router.get('/', async (req, res) => {
     const orders = await Order.find({});
     var data = [];
     var temp = {};
-    for (let order of orders) {
-      for (let prod of order.bill) {
-        temp = {};
-        temp.orderid = order._id;
-        temp.productid = prod.productid;
+    // for (let order of orders) {
+    //   for (let prod of order.bill) {
+    //     temp = {};
+    //     temp.orderid = order._id;
+    //     temp.productid = prod.productid;
 
-        var ven = await Product.findOne({ _id: mongoose.Types.ObjectId(prod.productid) });
-        if (ven.vendor.toString() == req.user._id.toString()) {
-          if (prod.isArrived) {
-            temp.sent = true;
-          } else {
-            temp.sent = false;
-          }
+    //     var ven = await Product.findOne({ _id: mongoose.Types.ObjectId(prod.productid) });
+    //     if (ven.vendor.toString() == req.user._id.toString()) {
+    //       if (prod.isArrived) {
+    //         temp.sent = true;
+    //       } else {
+    //         temp.sent = false;
+    //       }
 
-          temp.pay = "Online Payment";
-          if (order.paymentMethod == "COD") {
-            temp.pay = "Cash-On-Delivery";
-          }
-          temp.time = `${order.time}`;
-          temp.count = prod.count;
-          data.push(temp);
-        }
-      }
-    }
+    //       temp.pay = "Online Payment";
+    //       if (order.paymentMethod == "COD") {
+    //         temp.pay = "Cash-On-Delivery";
+    //       }
+    //       temp.time = `${order.time}`;
+    //       temp.count = prod.count;
+    //       data.push(temp);
+    //     }
+    //   }
+    // }
 
     res.render('index', { data: data });
   } else if (req.user && !req.user.isVerified) {
